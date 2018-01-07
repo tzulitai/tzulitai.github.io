@@ -1,0 +1,43 @@
+# Site settings
+title: '@tzulitai'
+description: 'Distributed Systems • Stream Processing • Java'
+url: 'http://tzulitai.com'
+baseurl:
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Tzu-Li (Gordon) Tai'
+  email: tzulitai@apache.org
+  twitter_username: tzulitai
+  github_username: tzulitai
+  linkedin_username: tzulitai
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+blog:
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
